@@ -100,7 +100,7 @@ plt.rc('font', size=14)
 plt.title(label1 + " " + label2)
 plt.xticks(range(n_vars), labels)
 #plt.title('Params. relevant for SD\n for ' + label + " conditions ")
-plt.savefig("ard_" + label1 + "_" + label2 + ".png")
+# plt.savefig("ard_" + label1 + "_" + label2 + ".png")
 
 plt.show()
 
