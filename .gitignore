@@ -107,5 +107,4 @@ venv.bak/
 .mypy_cache/
 
 # My dirs
-data/
 results/

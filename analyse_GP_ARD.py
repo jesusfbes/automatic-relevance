@@ -21,15 +21,12 @@ GPy.plotting.change_plotting_library('matplotlib')
 
 
 # load data
-data = pd.read_csv("data/sample_data.csv")
+data = pd.read_csv("sample_data.csv")
 
 labels= list(data)[:-1]
 
 y = np.array(data.iloc[:,-1])
 X = np.array(data.iloc[:,:-1])
-
-print(X.shape)
-print(y.shape)
 
 
 ard_values, sign_values, mean_sq_error = gp_ard(X, y)
