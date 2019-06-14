@@ -4,8 +4,12 @@ from sklearn.model_selection import KFold
 import GPy
 
 
-def gp_ard(X, y, n_folds=10):
+def gp_ard(X, y, n_folds=10,standarize=True):
     """ Function that computes the relevances of some data for some target"""
+
+    if standarize:
+        X = (X - np.mean(X, axis=0)) / np.std(X, axis=0)
+        y = (y - np.mean(y)) / np.std(y)
 
     kf = KFold(n_splits=n_folds)
     mean_sq_error = []
